@@ -12,7 +12,7 @@ const LoginStatus: React.FC<LoginStatusProps> = () => {
     setLoginUser("yethiha");
   }
   return (
-    <div className="flex justify-center items-center gap-5 py-5">
+    <div className="flex justify-center items-center gap-5 py-5 mt-5">
       <h5 className="text-center  text-sm">Login as: {loginUser}</h5>
       {
         loginUser ? (
