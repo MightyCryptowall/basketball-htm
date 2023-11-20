@@ -1,3 +1,4 @@
+"use client"
 import AuthProvider from "@/provider/AuthProvider";
 import PlayerProvider from "@/provider/PlayerProvider";
 import TeamProvider from "@/provider/TeamProvider";
