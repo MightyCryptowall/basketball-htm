@@ -1,5 +1,6 @@
 "use client";
 
+import AppRoot from "@/components/AppRoot";
 import CardItem from "@/components/CardItem";
 import CardList from "@/components/CardList";
 import LoginStatus from "@/components/LoginStatus";
@@ -14,8 +15,7 @@ export default function Home() {
 
   return (
     <>
-    <AuthProvider>
-      <PlayerProvider>
+   
       <main className="">
        <div>
        <h1 className="text-center pt-7 text-2xl">Basketball App</h1>
@@ -23,11 +23,10 @@ export default function Home() {
        </div>
        <CardList />
 
-       
+      
       </main>
-      </PlayerProvider>
-    </AuthProvider>
     
+      
     </>
   );
 }
