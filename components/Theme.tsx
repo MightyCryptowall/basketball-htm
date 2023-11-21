@@ -2,34 +2,28 @@ import { LuMoonStar } from "react-icons/lu";
 import { IoSunny } from "react-icons/io5";
 import { useContext } from "react";
 import { ThemeContext } from "@/provider/ThemeProvider";
+import { cn } from "@/lib/utils";
 
-interface ThemeProps {
-    
-}
- 
+interface ThemeProps {}
+
 const Theme: React.FC<ThemeProps> = () => {
-    const{isDark, SwitchDark,SwitchLight} = useContext (ThemeContext)
-    
+  const { isDark, toggleTheme } = useContext(ThemeContext);
 
-    return ( 
-        <div className="flex justify-end gap-5 mr-5 mt-3">
-            {isDark === 'dark' ?  
-            (<button onClick={SwitchLight}
-                className="flex gap-3 bg-white min-w-[100px] text-yellow-400 shadow-lg rounded-full py-2">
-                     <IoSunny size={25} /> Light
-                     
-                </button>):
-            (  <button onClick={SwitchDark}
-                className="flex gap-3 bg-black min-w-[100px] text-white shadow-lg rounded-full py-2">
-                     <LuMoonStar size={25}/> Dark
-                </button>)
-          
-           }
+  return (
+    <div className="flex justify-end gap-5 mr-5 mt-3">
+      <button
+        onClick={toggleTheme}
+        className={cn(
+          "flex justify-center",
+          "transition-all duration-500 ease-linear",
+          " gap-3 shadow-lg rounded-full p-3",
+          isDark ? "bg-white text-yellow-400" : "bg-black text-white"
+        )}
+      >
+        {isDark ? <IoSunny size={25} /> : <LuMoonStar size={25} />}
+      </button>
+    </div>
+  );
+};
 
-            
-          
-        </div>
-     );
-}
- 
 export default Theme;
