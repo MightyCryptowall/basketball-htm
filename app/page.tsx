@@ -4,6 +4,7 @@ import AppRoot from "@/components/AppRoot";
 import CardItem from "@/components/CardItem";
 import CardList from "@/components/CardList";
 import LoginStatus from "@/components/LoginStatus";
+import Theme from "@/components/Theme";
 import AuthProvider from "@/provider/AuthProvider";
 import PlayerProvider from "@/provider/PlayerProvider";
 import axios from "axios";
@@ -17,6 +18,7 @@ export default function Home() {
     <>
    
       <main className="">
+        <Theme/>
        <div>
        <h1 className="text-center pt-7 text-2xl">Basketball App</h1>
         <LoginStatus/>
